@@ -1,0 +1,40 @@
+{
+  "name": "japanese-starter-verbs",
+  "description": "A tool for learning Japanese verbs",
+  "version": "0.0.1",
+  "author": "Ben Mallinson <ben@benmallinson.me>",
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "gatsby": "^2.0.19",
+    "gatsby-plugin-manifest": "^2.0.5",
+    "gatsby-plugin-react-helmet": "^3.0.0",
+    "gatsby-plugin-sass": "^2.0.5",
+    "lodash": "^4.17.11",
+    "node-gyp": "^3.8.0",
+    "node-sass": "^4.10.0",
+    "prismjs": "^1.15.0",
+    "react": "^16.6.3",
+    "react-dnd": "^7.0.2",
+    "react-dom": "^16.6.3",
+    "react-helmet": "^5.2.0",
+    "react-kawaii": "^0.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.11.1",
+    "prettier": "^1.14.2"
+  },
+  "keywords": [
+    "japanese",
+    "tools"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "dev": "gatsby develop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "build": "gatsby build"
+  }
+}

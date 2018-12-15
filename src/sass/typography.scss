@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC');
+
+h1, h2, h3 {
+  font-family: 'Amatic SC', cursive;
+  font-weight: 900;
+  letter-spacing: .4em;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h4, h5, h6, p, a, span {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 500;
+  letter-spacing: .2em;
+  line-height: 1.5em;
+}

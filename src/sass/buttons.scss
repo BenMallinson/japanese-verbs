@@ -1,0 +1,41 @@
+a.buttons {
+    display: inline-block;
+    padding: 0.5em 3em;
+    border: 0.16em solid $primaryDark;
+    margin: 0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    background-color: $white;
+    color: $primary;
+    text-align: center;
+    transition: all 0.15s;
+    max-height: 100px;
+    max-width: 300px;
+    vertical-align: center;
+    cursor: pointer;
+
+  &:hover {
+    background-color: $primaryDark;
+    color: $white;
+  }
+
+  &.secondary {
+    background-color: $primaryDark;
+    color: $accent;
+    border-color: $accent;
+
+    &:hover {
+      background-color: $accent;
+      color: $primaryDark;
+      border-color: $accent;
+    }
+  }
+
+  @media all and (max-width: 30em) {
+      display: block;
+      margin: 0.4em auto;
+  }
+}
