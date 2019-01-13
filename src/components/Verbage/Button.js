@@ -6,7 +6,7 @@ class Button extends Component {
     return (
       <a
         className={classnames(
-          'buttons m-top-sm min-width-200',
+          'buttons m-top-sm',
           ...this.props.extraClasses
         )}
         onClick={() => this.props.onClick(this.props.title)}

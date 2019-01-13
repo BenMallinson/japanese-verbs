@@ -3,19 +3,27 @@ body {
   background-repeat: repeat;
 
   .container {
-    marginLeft: auto;
-    marginRight: auto;
-    maxWidth: 100%;
-    height: 100%;
+    display: grid;
     padding: 2rem;
+    grid-template-columns: 1fr;
+    max-width: 600px;
+
+    @media all and (max-width: 600px) {
+      max-width: inherit;
+    }
   }
 
   .three-column {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: auto auto auto;
     grid-gap: 20px;
     background: none;
     justify-items: center;
+
+
+    @media all and (max-width: 600px) {
+      grid-template-columns: auto;
+    }
   }
 
   .single-column {

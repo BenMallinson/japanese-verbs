@@ -3,6 +3,8 @@ import VerbList from './VerbList'
 import Button from './Button'
 import { Ghost, IceCream } from 'react-kawaii'
 import LanguageSelector from './LanguageSelector'
+import HelpButton from './HelpButton'
+import Modal from './Modal'
 
 class Verbage extends Component {
   state = {
@@ -10,6 +12,7 @@ class Verbage extends Component {
     completed: false,
     correct: false,
     language: 'english',
+    modal: false,
   }
 
   getVerb() {
@@ -31,6 +34,17 @@ class Verbage extends Component {
       completed: true,
       correct: this.isCorrect(answer),
     })
+  }
+
+  renderModal () {
+    const { modal } = this.state
+    if(modal === false) {
+      return null;
+    }
+
+    return (
+      <Modal onClose={() => this.setState({modal: false})} />
+    )
   }
 
   renderButtons() {
@@ -86,10 +100,6 @@ class Verbage extends Component {
           <h4>{`${verb[language].toUpperCase()} is a  ${verb.group} verb!`}</h4>
           <div className="m-bottom-md">
             <Ghost size="150" mood={correct ? 'excited' : 'sad'} />
-            <p>
-              For more information on why this is the case, please check out:
-              <a href="http://rcl.pliable.us/J-verbs.html">this website!</a>
-            </p>
           </div>
           <Button onClick={this.nextVerb} title={'Next'} />
         </div>
@@ -101,7 +111,9 @@ class Verbage extends Component {
     const { language, verb } = this.state
     return (
       <div>
+        {this.renderModal()}
         <h1 className={'center-text'}> 🇯🇵 VERBS 🇯🇵</h1>
+        <HelpButton onClick={() => this.setState({modal: true})} />
         <div className={'single-column center-text'}>
           <div>
             <LanguageSelector onClick={value => this.changeLanguage(value)} />

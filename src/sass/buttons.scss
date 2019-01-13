@@ -1,8 +1,7 @@
 a.buttons {
     display: inline-block;
-    padding: 0.5em 3em;
+    padding: 0.5em 2em;
     border: 0.16em solid $primaryDark;
-    margin: 0 0.3em 0.3em 0;
     box-sizing: border-box;
     text-decoration: none;
     text-transform: uppercase;
@@ -13,9 +12,14 @@ a.buttons {
     text-align: center;
     transition: all 0.15s;
     max-height: 100px;
-    max-width: 300px;
     vertical-align: center;
     cursor: pointer;
+    min-width: 75%;
+    width: 100%;
+
+  @media all and (max-width: 600px) {
+    width: 100%;
+  }
 
   &:hover {
     background-color: $primaryDark;
@@ -32,10 +36,5 @@ a.buttons {
       color: $primaryDark;
       border-color: $accent;
     }
-  }
-
-  @media all and (max-width: 30em) {
-      display: block;
-      margin: 0.4em auto;
   }
 }
